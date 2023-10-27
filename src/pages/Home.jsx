@@ -1,67 +1,82 @@
 import React from 'react';
-import { IonContent, IonPage, IonLabel, IonInput, IonButton, IonIcon, IonItem, IonCol } from '@ionic/react';
-import { arrowBackOutline, mailOutline, fingerPrintOutline } from 'ionicons/icons';
+import {  IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
 
-const SignInScreen = () => {
-
-  const onSignIn = (e) => {
-    e.preventDefault();
-  }
-
+function Home() {
+ 
+  
   return (
-    <IonPage>
-      <IonContent fullscreen>
+    <>
+      <IonHeader translucent={true} className='ion-no-border' >
+        <IonToolbar>
+          <IonTitle>Header</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+    <IonContent fullscreen={true}  className="ion--no-padding">
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>45k views . 1 months ago</IonCardSubtitle>
+      </IonCardHeader>
 
-        <IonItem lines="none" className="ion-padding flex items-center hover:bg-gray-100">
-          <IonIcon icon={arrowBackOutline} color="secondary" />
-          <IonLabel className="pl-2">Sign In</IonLabel>
-        </IonItem>
+     
+    </IonCard>
 
-        <div className="ion-text-center">
-          <img src="" alt="opaylogo" />
-        </div>
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      </IonCardHeader>
 
-        <form className="ion-margin-top ion-padding bg-white w-100" onSubmit={onSignIn}>
-        
-          <div className="ion-text-center ion-margin-bottom">
-            <h3 className="text-purple-500 text-2xl">OPay</h3>  
-          </div>
-        
-          <IonItem lines="none" className="ion-margin-bottom">
-            <IonInput className="w-full" placeholder="Enter email"/>
-          </IonItem>
-        
-          <IonItem lines="none">
-           
-            <IonInput label="Outline input" labelPlacement="floating" fill="outline" placeholder="Enter text"></IonInput>
-          </IonItem>
+      <IonCardContent>Heres a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+    </IonCard>
 
-          <div className="ion-margin-top">
-            <IonButton expand="block" color="success" className="ion-no-margin">Sign In</IonButton>
-            <IonButton expand="block" color="light" className="ion-no-margin ion-margin-top">
-              Create Account
-            </IonButton>
-          </div>
 
-        </form>
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      </IonCardHeader>
 
-        <IonCol size="12" className="ion-text-center ion-margin-top">
-          <p className="text-2xl">Forgot password?</p>
-          <p className="ion-text-medium-tint">Login with fingerprint</p>
+      <IonCardContent>Heres a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+    </IonCard>
 
-          <IonIcon icon={fingerPrintOutline} color="secondary" className="p-2" />
-        </IonCol>
 
-        <IonCol className="ion-text-center ion-margin-top">
-          <IonIcon icon={mailOutline} color="secondary" />
-          <p>
-            Need Help? <span className="ion-color-secondary">Chat with Support</span>  
-          </p>
-        </IonCol>
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      </IonCardHeader>
 
-      </IonContent>
-    </IonPage>
+      <IonCardContent>Heres a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+    </IonCard>
+
+
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      </IonCardHeader>
+
+      <IonCardContent>Heres a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+    </IonCard>
+
+
+    <IonCard>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <IonCardHeader>
+        <IonCardTitle>Card Title</IonCardTitle>
+        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+      </IonCardHeader>
+
+      <IonCardContent>Heres a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+    </IonCard>
+    </IonContent>
+    </>
   );
-};
-
-export default SignInScreen;
+}
+export default Home;
